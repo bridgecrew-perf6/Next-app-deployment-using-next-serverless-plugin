@@ -1,0 +1,15 @@
+mydemoappNext:
+  component: "@sls-next/serverless-component@3.7.0-alpha.3"
+  inputs:
+    bucketName: <Bucket Name>
+    cloudfront:
+      distributionId: <Distribution Id>
+      origins:
+        - url: <origin>
+          private: true
+          pathPatterns:
+            /images/*:
+              minTTL: 10
+              maxTTL: 10
+              defaultTTL: 10
+    
